@@ -2,12 +2,14 @@ package demo.simple2.model;
 
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
-import lombok.Getter;
+import lombok.*;
 import lombok.Setter;
 
 
 @Getter
 @Setter
+@Builder
+@AllArgsConstructor
 public class PersonDTO {
 
     private Long id;
@@ -20,4 +22,5 @@ public class PersonDTO {
     @Size(max = 255)
     private String name;
 
+    public PersonDTO() {}
 }
